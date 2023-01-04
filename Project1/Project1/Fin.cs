@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SAE_DEV
+namespace Project1
 {
     public class Fin : GameScreen
     {

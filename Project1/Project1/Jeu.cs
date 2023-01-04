@@ -10,7 +10,7 @@ using MonoGame.Extended.Sprites;
 using MonoGame.Extended.Screens;
 using System;
 
-namespace SAE_DEV
+namespace Project1
 {
 
     public class Jeu : GameScreen
