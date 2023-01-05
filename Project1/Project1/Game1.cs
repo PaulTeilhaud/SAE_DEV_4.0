@@ -14,6 +14,7 @@ namespace Project1
 {
     public class Game1 : Game
     {
+
         private readonly ScreenManager _screenManager;
         public SpriteBatch SpriteBatch { get; set; }
         Acceuil _acceuil;
@@ -21,7 +22,6 @@ namespace Project1
         Fin _fin;
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
         public Game1()
         {
             _screenManager = new ScreenManager();
@@ -48,31 +48,31 @@ namespace Project1
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
             {
-                GraphicsDevice.BlendState = BlendState.AlphaBlend;
-                KeyboardState keyboardState = Keyboard.GetState();
+                Exit();
+            }
                 
-                if (keyboardState.IsKeyDown(Keys.A))
+            GraphicsDevice.BlendState = BlendState.AlphaBlend;
+            KeyboardState keyboardState = Keyboard.GetState();
+                
+            if (keyboardState.IsKeyDown(Keys.A))
                 {
                     _screenManager.LoadScreen(_acceuil, new FadeTransition(GraphicsDevice,
                     Color.Black));
                 }
-                
-               
-                
-
-                else if (keyboardState.IsKeyDown(Keys.E))
-                    {
-                        _screenManager.LoadScreen(_jeu, new FadeTransition(GraphicsDevice, Color.Black));
-                    }
-                else if (keyboardState.IsKeyDown(Keys.R))
-                 {
-                        _screenManager.LoadScreen(_fin, new FadeTransition(GraphicsDevice,
-                        Color.Black));
+              
+            else if (keyboardState.IsKeyDown(Keys.E))
+                {
+                    _screenManager.LoadScreen(_jeu, new FadeTransition(GraphicsDevice, Color.Black));
                 }
+                
+            else if (keyboardState.IsKeyDown(Keys.R))
+                {
+                    _screenManager.LoadScreen(_fin, new FadeTransition(GraphicsDevice,
+                    Color.Black));
                 }
-                base.Update(gameTime);
+                
+            base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)

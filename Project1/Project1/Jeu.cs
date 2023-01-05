@@ -52,12 +52,12 @@ namespace Project1
         {
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _tiledMap = Content.Load<TiledMap>("mapGenerale");
+            _tiledMap = Content.Load<TiledMap>("");
             _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
             SpriteSheet spriteSheet = Content.Load<SpriteSheet>("persoAnimation.sf", new JsonContentLoader());
             _perso = new AnimatedSprite(spriteSheet);
 
-
+            base.LoadContent();
             // TODO: use this.Content to load your game content here
         }
 
@@ -104,7 +104,7 @@ namespace Project1
 
         public override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            _myGame.GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
             _tiledMapRenderer.Draw();
