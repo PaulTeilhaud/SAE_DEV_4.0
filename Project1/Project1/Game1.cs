@@ -32,6 +32,7 @@ namespace Project1
         {
             // TODO: Add your initialization logic here
             GraphicsDevice.BlendState = BlendState.AlphaBlend;
+            _graphics.ApplyChanges();           
             base.Initialize();
         }
 

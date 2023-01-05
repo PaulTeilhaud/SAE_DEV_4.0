@@ -23,7 +23,7 @@ namespace Project1
             _myGame = game;
             _graphics = new GraphicsDeviceManager(_myGame);
             Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            
         }
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
@@ -34,7 +34,8 @@ namespace Project1
         private KeyboardState _keyboardState;
         private int _sensPerso;
         private int _vitessePerso;
-        private bool IsMouseVisible;
+        
+        
         public const int TAILLE_FENETRE = 640;
 
 
