@@ -20,7 +20,7 @@ namespace Project1
         Jeu _jeu;
         Fin _fin;
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+
 
         public Game1()
         {
@@ -32,6 +32,7 @@ namespace Project1
         {
             // TODO: Add your initialization logic here
             GraphicsDevice.BlendState = BlendState.AlphaBlend;
+            _graphics.ApplyChanges();           
             base.Initialize();
         }
 
